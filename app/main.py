@@ -35,7 +35,7 @@ with st.form("student"):
     hsc_s = c2.selectbox("12th stream", ["Commerce", "Science", "Arts"])
     ssc_b = c1.selectbox("10th board", ["Central", "Others"])
     hsc_b = c2.selectbox("12th board", ["Central", "Others"])
-    gender = st.selectbox("Gender", ["M", "F"])
+    
     go = st.form_submit_button("Assess readiness")
 
 if go:
@@ -44,7 +44,7 @@ if go:
                communication_score=communication_score, projects=projects,
                internships=internships, certifications=certifications,
                workex=workex, degree_t=degree_t, specialisation=specialisation,
-               hsc_s=hsc_s, ssc_b=ssc_b, hsc_b=hsc_b, gender=gender)
+               hsc_s=hsc_s, ssc_b=ssc_b, hsc_b=hsc_b, )
     X = pd.DataFrame([row])[expected]   # keeps only columns the model uses
 
     score = pipe.predict_proba(X)[0, 1] * 100
