@@ -1,0 +1,20 @@
+{
+    "model_name": "Tuned Logistic Regression",
+    "threshold": 0.45,
+    "accuracy": 0.65,
+    "balanced_accuracy": 0.5987718688448616,
+    "macro_f1": 0.5978860294117647,
+    "roc_auc": 0.6386925681329574,
+    "dataset_size": 3000,
+    "training_size": 2400,
+    "testing_size": 600,
+    "number_of_features": 14,
+    "target": "placement_status",
+    "dataset_type": "Synthetic",
+    "model_parameters": {
+        "classifier__C": 10,
+        "classifier__class_weight": "balanced",
+        "classifier__solver": "lbfgs"
+    },
+    "evaluation_date": "2026-11-05"
+}
